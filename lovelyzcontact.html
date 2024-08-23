@@ -1,0 +1,84 @@
+<!-- I got extra help from https://www.w3schools.com/howto/howto_css_contact_form.asp !!-->
+<!DOCTYPE html>
+<html lang="en">
+    <header>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LovelyZ Talk</title>
+        <!-- My Favicon <3 !!!!! -->
+        <link rel="icon" type="image/x-icon" href="FAVICON.png">
+
+        <img class="logo" src="LOVELYZ LOGO PNG.png" alt="logo">
+                <nav class="navbar">
+                        <ul>
+                            <li><a href="lovelyzhome.html">Home</a></li>
+                            <li><a href="lovelyzshop.html">Shop</a></li>
+                            <li><a href="lovelyzevents.html">Events</a></li>
+                            <li><a href="lovelyzinfo.html">Info</a></li>
+                            <li><a href="lovelyzcontact.html">Contact</a></li>
+                          </ul>
+                </nav>
+    <!-- External Style Sheet (CSS) -->
+    <link rel="stylesheet" href="lovelyzcss.css">
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #f0beff;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+        
+        input[type=submit] {
+          background-color: rgb(234, 202, 249);
+          color: rgb(98, 44, 126);
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          background-color: rgb(98, 44, 126);
+        }
+        
+        .container {
+          border-radius: 5px;
+          background-color: rgb(251, 229, 250);
+          padding: 20px;
+        }
+        </style>
+    </header>
+    
+    <!-- ........................................Just Staying Organized.................................................. -->
+    <body>
+        <h3>Contact</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="subject">Questions, Comments, Concerns?</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+    </body>
+
+    <!-- ........................................Just Staying Organized.................................................. -->
+    <footer>
+
+    </footer>
+</html>

@@ -1,0 +1,289 @@
+<!-- I got extra help from https://www.w3schools.com and then of course what we learned in class! Hopefully I did well!-->
+<!DOCTYPE html>
+<html lang="en">
+    <header>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LovelyZ Talk</title>
+        <!-- My Favicon <3 !!!!! -->
+        <link rel="icon" type="image/x-icon" href="FAVICON.png">
+
+        <img class="logo" src="LOVELYZ LOGO PNG.png" alt="logo">
+                <nav class="navbar">
+                        <ul>
+                            <li><a href="lovelyzhome.html">Home</a></li>
+                            <li><a href="lovelyzshop.html">Shop</a></li>
+                            <li><a href="lovelyzevents.html">Events</a></li>
+                            <li><a href="lovelyzinfo.html">Info</a></li>
+                            <li><a href="lovelyzcontact.html">Contact</a></li>
+                          </ul>
+                </nav>
+    <!-- External Style Sheet (CSS) -->
+    <link rel="stylesheet" href="lovelyzeventscss.css">
+
+    </header>
+    
+    <!-- ........................................Just Staying Organized.................................................. -->
+    <body>
+        <div>
+          <!-- NOTE !! I tried this on my own the first time, no copy and paste, and somehow it didn't work??? So I made a new file and tested it out to see if it really worked and it did, so I have no idea where it went wrong. It works now, the only thing is I don't understand the Javascript. I took Intro to Programming last semester, but I don't think we did a whole lot with it, we made a little game through it. -->
+            <aside>
+              <style>
+              .filterDiv {
+                float: left;
+                background-color: #ffcfff;
+                color: #000000;
+                width: 350px;
+                line-height: 30px;
+                text-align: center;
+                margin: 1px;
+                display: none;
+              }
+              
+              .show {
+                display: block;
+              }
+              
+              .container {
+                margin-top: 20px;
+                overflow: hidden;
+              }
+              
+              /* Style the buttons */
+              .btn {
+                border: none;
+                outline: none;
+                padding: 12px 16px;
+                background-color: #ff7bf6;
+                cursor: pointer;
+              }
+              
+              .btn:hover {
+                background-color: #ffccfa;
+              }
+              
+              .btn.active {
+                background-color: #5c3e57;
+                color: white;
+              }
+              </style>
+              <body>
+              
+              <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn" onclick="filterSelection('fuelfest')"> Fuel Fest</button>
+                <button class="btn" onclick="filterSelection('formuladrift')"> Formula Drift</button>
+                <button class="btn" onclick="filterSelection('formul1')"> Formula 1</button>
+                <button class="btn" onclick="filterSelection('worldwide')"> Worldwide</button>
+              </div>
+              
+              <div class="container">
+                <div class="filterDiv fuelfest">Los Angeles</div>
+                <div class="filterDiv fuelfest">Scottsdale</div>
+                <div class="filterDiv fuelfest">Tokyo</div>
+                <div class="filterDiv fuelfest">West Palm Beach</div>
+                <div class="filterDiv fuelfest">Dallas</div>
+                <div class="filterDiv fuelfest">Mid-Atlantic</div>
+                <div class="filterDiv fuelfest">Atlanta</div>
+                <div class="filterDiv formuladrift">Long Beach, CA</div>
+                <div class="filterDiv formuladrift">Altanla, GA</div>
+                <div class="filterDiv formuladrift">Orlando, FL</div>
+                <div class="filterDiv formuladrift">Englishtown, NJ</div>
+                <div class="filterDiv formuladrift">St. Louis, MO</div>
+                <div class="filterDiv formuladrift">Seattle, WA</div>
+                <div class="filterDiv formuladrift">Grantsvillie, UT</div>
+                <div class="filterDiv formuladrift">Irwindale, CA</div>
+            
+              </div>
+              
+              <!-- this is the only part I do not understand, but it's the only way for the buttons to work -->
+               <!-- I tried just using <button> and I thought it would work still because that's what we did before, but it didn't -->
+              <script>
+              filterSelection("all")
+              function filterSelection(c) {
+                var x, i;
+                x = document.getElementsByClassName("filterDiv");
+                if (c == "all") c = "";
+                for (i = 0; i < x.length; i++) {
+                  w3RemoveClass(x[i], "show");
+                  if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                }
+              }
+              
+              function w3AddClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                  if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                }
+              }
+              
+              function w3RemoveClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                  while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                  }
+                }
+                element.className = arr1.join(" ");
+              }
+              
+              // Add active class to the current button (highlight it)
+              var btnContainer = document.getElementById("myBtnContainer");
+              var btns = btnContainer.getElementsByClassName("btn");
+              for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function(){
+                  var current = document.getElementsByClassName("active");
+                  current[0].className = current[0].className.replace(" active", "");
+                  this.className += " active";
+                });
+              }
+              </script>
+            </aside>
+
+            <!-- I took intro to programming last semester and we only messed with javascript a little -->
+            
+        </div>
+
+        <main>
+          <!-- Now we need to figure out how to sync the aside filter with the main -->
+            <div class="responsive">
+                <div class="gallery">
+                    <img src="fuelfest1.jpg" alt="fflosangeles">
+                  </a>
+                  <div class="desc">FUEL FEST MAY 31 - JUNE 1 2024 LOS ANGELES</div>
+                </div>
+              </div>
+              
+              <div class="responsive">
+                <div class="gallery">
+                    <img src="fuelfest7.jpg" alt="ffscottsdale">
+                  </a>
+                  <div class="desc">FUEL FEST DECEMBER 07, 2024 SCOTTSDALE</div>
+                </div>
+              </div>
+              
+              <div class="responsive">
+                <div class="gallery">
+                    <img src="fuelfest4.jpg" alt="fftokyo">
+                  </a>
+                  <div class="desc">FUEL FEST AUGUST 31, 2024 TOKYO</div>
+                </div>
+              </div>
+              
+              <div class="responsive">
+                <div class="gallery">
+                    <img src="fuelfest2.jpg" alt="ffwestpalmbeach">
+                  </a>
+                  <div class="desc">FUEL FEST FEBRUARY 24, 2024 WEST PALM BEACH</div>
+                </div>
+              </div>
+
+              <div class="responsive">
+                <div class="gallery">
+                    <img src="fuelfest3.jpg" alt="fffortworth">
+                  </a>
+                  <div class="desc">FUEL FEST APRIL 20, 2024 DALLAS - FORT WORTH</div>
+                </div>
+                
+              </div>
+              <div class="responsive">
+                <div class="gallery">
+                    <img src="fuelfest6.jpg" alt="ffmidatlantic">
+                  </a>
+                  <div class="desc">FUEL FEST SEPTEMBER 14, 2024 MID-ATLANTIC</div>
+                </div>
+              </div>
+
+              <div class="responsive">
+                <div class="gallery">
+                    <img src="fuelfest5.jpg" alt="ffatlanta">
+                  </a>
+                  <div class="desc">FUEL FEST OCTOBER 19, 2024 ATLANTA</div>
+                </div>
+              </div>
+
+              <div class="responsive">
+                <div class="gallery">
+                    <img src="formuladrift1.jpg" alt="Mountains">
+                  </a>
+                  <div class="desc">LONG BEACH, CALIFORNIA, USA APR 12 - APR 13</div>
+                </div>
+              </div>
+              
+              <div class="clearfix"></div>
+              
+              <div class="responsive">
+                <div class="gallery">
+                    <img src="formuladrift2.jpg" alt="fflosangeles">
+                  </a>
+                  <div class="desc">ATLANTA, GEORGIA, USA MAY 09 - MAY 11</div>
+                </div>
+              </div>
+              
+              <div class="responsive">
+                <div class="gallery">
+                    <img src="formuladrift3.jpg" alt="ffscottsdale">
+                  </a>
+                  <div class="desc">ORLANDO, FLORIDA, USA MAY 31 - JUN 01</div>
+                </div>
+              </div>
+              
+              <div class="responsive">
+                <div class="gallery">
+                    <img src="formuladrift4.jpg" alt="fftokyo">
+                  </a>
+                  <div class="desc">ENGLISHTOWN, NEW JERSEY, USA JUN 20 - JUN 22</div>
+                </div>
+              </div>
+              
+              <div class="responsive">
+                <div class="gallery">
+                  <div class="filterDiv yearly"></div>
+                    <img src="formuladrift5.jpg" alt="ffwestpalmbeach">
+                  </a>
+                  <div class="desc">ST. LOUIS, MISSOURI, USA JUL 18 - JUL 20</div>
+                </div>
+              </div>
+
+              <div class="responsive">
+                <div class="gallery">
+                  <div class="filterDiv yearly"></div>
+                    <img src="formuladrift6.jpg" alt="fffortworth">
+                  </a>
+                  <div class="desc">SEATTLE, WASHINGTON, USA AUG 09 - AUG 10</div>
+                </div>
+                
+              </div>
+              <div class="responsive">
+                <div class="gallery">
+                  <div class="filterDiv yearly"></div>
+                    <img src="formuladrift7.jpg" alt="ffmidatlantic">
+                  </a>
+                  <div class="desc">GRANTSVILLE, UTAH, USA AUG 29 - AUG 31</div>
+                </div>
+              </div>
+
+              <div class="responsive">
+                <div class="gallery">
+                  <div class="filterDiv yearly"></div>
+                    <img src="formuladrift8.jpg" alt="Mountains">
+                  </a>
+                  <div class="desc">IRWINDALE, CALIFORNIA, USA OCT 18 - OCT 19</div>
+                </div>
+              </div>
+              
+              <div class="clearfix"></div>
+              
+            </main>
+    </body>
+    
+
+    <!-- ........................................Just Staying Organized.................................................. -->
+    <footer>
+
+    </footer>
+</html>

@@ -1,0 +1,142 @@
+body{
+    background-color: rgb(251, 229, 250);
+}
+
+.logo {
+    width: 240px;
+    height: 90px;
+}
+
+  /*........................................NAVBAR..................................................*/
+
+.navbar{
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #ca9cff;
+        color: white;
+      }
+      
+      li {
+        float: left;
+      }
+      
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      li a:hover {
+        background-color: #8f6fa4;
+      }
+
+      .active {
+        background-color: #ba92db;
+      }
+
+      li {
+        border-right: 1px solid #bbb;
+      }
+      
+      li:last-child {
+        border-right: none;
+      }
+
+      ul {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+      }
+}
+
+  /*........................................Just Staying Organized..................................................*/
+
+body{
+    margin: 0;
+    font-family: 'Century Gothic', 'Arial Narrow', Arial, sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow-x: hidden;
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
+}
+
+header{
+    grid-row: 1;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(234, 202, 249);
+    color: rgb(98, 44, 126);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+main{
+    grid-row: 2;
+    padding-top: 100px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+article{
+    padding-top: 20px;
+}
+
+aside{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 20%;
+    padding-top: 150px;
+    padding-left: 10px;
+    background-color:rgb(253, 169, 231);
+    color:rgb(71, 24, 68);
+}
+
+p{
+    font-size: x-large;
+}
+
+footer{
+    grid-row: 3;
+    width: 100%;
+    background-color:rgb(234, 202, 249);
+    color:rgb(98, 44, 126);
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+}
+
+  /*........................................SCROLL..................................................*/
+
+  body {
+    overflow-y:auto;
+    overflow-x:auto;
+  }
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #332344; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #27173e; 
+  }
+
+
+  /*........................................Just Staying Organized..................................................*/
